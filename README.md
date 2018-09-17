@@ -2,21 +2,10 @@
 
 The `dotenv` package simplifies setting up environment variables. This provides security to your projects as you don't need to hardcode sensitive data into your applications.
 
-## Sample `.env` file
-
+## Installation
+```bash
+go get github.com/jpsheehan/dotenv
 ```
-KEY: Value
-NAME: Jesse
-AGE: 25
-THIS LINE IS IGNORED
-COUNTRY: NZ
-```
-
-## Config(filenames ...string) error
-Sets the environment variables found in the array of filenames supplied. If no filenames are supplied then it defaults to `.env`. It returns an error or nil depending on if an error occurred.
-
-## ConfigOne(filename string) error
-Sets the environment variables found in the filename supplied. It returns an error or nil depending on if an error occurred.
 
 ## Usage:
 ```go
@@ -33,3 +22,19 @@ func main() {
     // environment variables are set up!
 }
 ```
+
+## Sample `.env` file
+
+```
+KEY: Value
+NAME: Jesse
+AGE: 25
+THIS LINE IS IGNORED
+COUNTRY: NZ
+```
+
+## Config(filenames ...string) error
+Sets the environment variables found in the array of filenames supplied. If no filenames are supplied then it defaults to `.env`. It returns an error or nil depending on if an error occurred.
+
+## ConfigOne(filename string) error
+Sets the environment variables found in the filename supplied. It returns an error or nil depending on if an error occurred.
